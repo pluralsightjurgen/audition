@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Azure.WebJobs;
 
-public static async Task<IActionResult> Run(HttpRequest req, ILogger log, IAsyncCollector<dynamic> outputDocuments)
+public static async Task<IActionResult> Run(
+    HttpRequest req, 
+    ILogger log,
+    Microsoft.Azure.WebJobs.IAsyncCollector<dynamic> outputDocuments)
 {
     log.LogInformation("C# HTTP trigger function processed a request.");
 
